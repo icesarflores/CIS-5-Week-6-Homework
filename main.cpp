@@ -5,36 +5,52 @@ using namespace std;
 // Homework 6 — Your Name
 // CIS 5 Week 06 · Menu
 
-int option_1 = 1,
-    option_2 = 2,
-    option_3 = 3,
-    selection;
+int selection,
+    counter = 0,
+    num = 0,
+    countdown = 0;
 
 string name = "Cesar";
 string hello = "Hello";
 string phrase = hello + " " + name;
-string phrase2 = "Option 2";
 
 int main() {
 
   do
   {
-    cout << "Make a Selection\n";
+    counter++;
+    cout << "--Make a Selection--\n";
 
     cout << "Enter the number 1: \n" 
          << "Enter the number 2: \n"
-         << "Enter the number 3:\n"
-         << "Enter an option: \n";
+         << "Enter the number 3 to Exit:\n"
+         << "Enter an option: ";
          cin >> selection;
+         cout << endl;
 
-  } while(selection <= option_1); {
-      cout << phrase;
+        if (selection == 1) {
+            cout << "Enter your name: ";
+            cin >> name;
+            cout << "Hello, " << name << "." << '\n';
+            cout << endl;
 
-  } while(selection <= option_2); {
-      cout << phrase;
-  }
+        } 
+        else if (selection == 2) {
 
+            cout << "Enter a number between 10 and 100: ";
+            cin >> num;
+            
+            for (num; num >= countdown; num--){
+            cout << num << endl;
+            }
 
+           
+        } 
+
+    } while (selection != 3);
+
+cout << "Your selection is 3.\n";
+cout << "The Menu is closed.\n";
 
   return 0;
 }
