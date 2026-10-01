@@ -19,7 +19,8 @@ string phrase = hello + " " + name;
 int main() {
 
     do {
-         cout << "--Make a Selection--\n";
+        
+    cout << "--Make a Selection--\n";
 
     cout << "Enter the number 1: \n" 
          << "Enter the number 2: \n"
