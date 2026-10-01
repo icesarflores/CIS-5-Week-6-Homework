@@ -6,51 +6,54 @@ using namespace std;
 // CIS 5 Week 06 · Menu
 
 int selection,
-    counter = 0,
     num = 0,
-    countdown = 0;
+    countdown = 0,
+    option_1 = 1,
+    option_2 = 2,
+    option_3 = 3;
 
-string name = "Cesar";
+string name;
 string hello = "Hello";
 string phrase = hello + " " + name;
 
 int main() {
 
-  do
-  {
-    counter++;
-    cout << "--Make a Selection--\n";
+    do {
+         cout << "--Make a Selection--\n";
 
     cout << "Enter the number 1: \n" 
          << "Enter the number 2: \n"
-         << "Enter the number 3 to Exit:\n"
+         << "Enter the number 3 to Exit.\n"
          << "Enter an option: ";
          cin >> selection;
          cout << endl;
 
-        if (selection == 1) {
+        if (selection == option_1) {
+
             cout << "Enter your name: ";
             cin >> name;
             cout << "Hello, " << name << "." << '\n';
             cout << endl;
 
         } 
-        else if (selection == 2) {
+        if (selection == option_2) {
 
-            cout << "Enter a number between 10 and 100: ";
+            cout << "Enter a number to start the countdown: ";
             cin >> num;
             
-            for (num; num >= countdown; num--){
-            cout << num << endl;
+            for (num; num >= countdown; num--) {
+                cout << num << endl;
             }
 
-           
+        } if (selection == option_3) {
+
+            cout << "You've selected 3.\n";
+
         } 
 
-    } while (selection != 3);
+    } while (selection != option_3);
 
-cout << "Your selection is 3.\n";
-cout << "The Menu is closed.\n";
+    cout << "Menu Closed.\n";
 
   return 0;
 }
